@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrainian Vertep Tradition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Ukrainian Vertep Tradition</h1>
+        <p>Experience the Cultural Heritage of Ukrainian Nativity Plays</p>
+        
+        <!-- 教授信息的 C 位展示 -->
+        <div class="professor-highlight" style="background-image: url('background123.jpg');">
+            <a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank" class="professor-link">
+                <img src="photo123.jpg" alt="Dr. Olha Khometa" class="professor-photo">
+                <div class="professor-info">
+                    <h2>Dr. Olha Khometa</h2>
+                    <p>Dr. Olha Khometa is an esteemed professor at the University of Illinois specializing in Slavic folklore and Ukrainian cultural studies. As the guiding professor for our Vertep project, she brings a wealth of knowledge on Ukrainian traditions, bridging academic rigor with cultural appreciation. Her expertise not only enhances our understanding of Vertep but also fosters a deep respect for Ukrainian heritage.</p>
+                    <p><em>Click here to learn more about Dr. Khometa’s academic work and contributions.</em></p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="audio-section">
+            <div class="music-disc" onclick="playAudio()"></div>
+            <p><strong>Click the record to play/pause background music</strong></p>
+            <audio id="background-music" src="hej_sokoly.mp3" loop></audio>
+
+            <!-- Carol of the Bells 链接图片 -->
+            <div class="media-item" style="width: 200px; margin: 20px auto;">
+                <a href="https://en.wikipedia.org/wiki/Carol_of_the_Bells" target="_blank">
+                    <img src="photo123.jpg" alt="Carol of the Bells">
+                    <div class="overlay">Carol of the Bells - Originated in Ukraine</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>About Vertep</h2>
+            <p>Vertep is a traditional Ukrainian nativity play that blends folk storytelling with religious themes...</p>
+        </section>
+
+        <section class="media-links">
+            <a href="https://en.wikipedia.org/wiki/Vertep" target="_blank" class="media-item">
+                <img src="photo123.jpg" alt="Vertep on Wikipedia">
+                <div class="overlay">Learn More on Wikipedia</div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?app=desktop&v=eq4qIOFs634" target="_blank" class="media-item">
+                <img src="photo123.jpg" alt="Vertep on YouTube">
+                <div class="overlay">Watch on YouTube</div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 University of Illinois - Slavic Department</p>
+        <p>
+            <a href="https://illinois.edu" target="_blank">University of Illinois</a> | 
+            <a href="https://slavic.illinois.edu" target="_blank">Slavic Department</a> | 
+            <a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank">Dr. Olha Khometa</a>
+        </p>
+        <p>Dr. Olha Khometa: Professor of Slavic folklore and Ukrainian cultural studies, guiding this Vertep project.</p>
+    </footer>
+
+    <!-- 雪花效果容器 -->
+    <div id="snow-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+    "header": {
+        "title": "Ukrainian Vertep Tradition",
+        "subtitle": "Experience the Cultural Heritage of Ukrainian Nativity Plays"
+    },
+    "audioSection": {
+        "instruction": "Click the record to play/pause background music",
+        "audioSrc": "hej_sokoly.mp3"
+    },
+    "mediaLinks": [
+        {
+            "title": "Carol of the Bells - Originated in Ukraine",
+            "image": "photo123.jpg",
+            "link": "https://en.wikipedia.org/wiki/Carol_of_the_Bells"
+        },
+        {
+            "title": "Learn More on Wikipedia",
+            "image": "photo123.jpg",
+            "link": "https://en.wikipedia.org/wiki/Vertep"
+        },
+        {
+            "title": "Watch on YouTube",
+            "image": "photo123.jpg",
+            "link": "https://www.youtube.com/watch?app=desktop&v=eq4qIOFs634"
+        }
+    ],
+    "footer": {
+        "university": "University of Illinois",
+        "slavicDepartment": "Slavic Department",
+        "professor": "Dr. Olha Khometa",
+        "universityLink": "https://illinois.edu",
+        "slavicDepartmentLink": "https://slavic.illinois.edu",
+        "professorLink": "https://slavic.illinois.edu/directory/profile/okhometa"
+    }
+}

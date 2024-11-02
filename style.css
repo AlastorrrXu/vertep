@@ -1,0 +1,164 @@
+/* 页面整体样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+.professor-highlight {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 8px;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.professor-link {
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.professor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.professor-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.professor-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.professor-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.audio-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.music-disc {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background-image: url('photo123.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.music-disc.spin {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.media-item {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.media-item:hover img {
+    filter: brightness(60%);
+}
+
+.media-item .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.footer {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.footer p {
+    margin: 0.5em 0;
+}
+
+.footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 雪花样式 */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    opacity: 0.8;
+    user-select: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}

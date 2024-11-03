@@ -2,74 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukrainian Vertep Tradition</title>
+    <title>Ukrainian Vertep Tradition @ UIUC</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('ukrainian-song');
+            const disc = document.querySelector('.music-disc img');
+
+            if (audio.paused) {
+                audio.play();
+                disc.classList.add('spin');
+            } else {
+                audio.pause();
+                disc.classList.remove('spin');
+            }
+        }
+    </script>
 </head>
 <body>
-    <header class="header">
-        <h1>Ukrainian Vertep Tradition</h1>
-        <p>Experience the Cultural Heritage of Ukrainian Nativity Plays</p>
-        
-        <!-- 教授信息的 C 位展示 -->
-        <div class="professor-highlight" style="background-image: url('background123.jpg');">
+
+<!-- Background with snow effect -->
+<header class="header">
+    <h1>Ukrainian Vertep Tradition</h1>
+    <p>Experience the Cultural Heritage of Ukrainian Nativity Plays</p>
+    <p>We are looking forward to seeing you at our play!</p>
+</header>
+
+<main>
+    <section class="intro-section">
+        <div class="professor-highlight">
+            <h2>Organizers</h2>
             <a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank" class="professor-link">
-                <img src="photo123.jpg" alt="Dr. Olha Khometa" class="professor-photo">
-                <div class="professor-info">
-                    <h2>Dr. Olha Khometa</h2>
-                    <p>Dr. Olha Khometa is an esteemed professor at the University of Illinois specializing in Slavic folklore and Ukrainian cultural studies. As the guiding professor for our Vertep project, she brings a wealth of knowledge on Ukrainian traditions, bridging academic rigor with cultural appreciation. Her expertise not only enhances our understanding of Vertep but also fosters a deep respect for Ukrainian heritage.</p>
-                    <p><em>Click here to learn more about Dr. Khometa’s academic work and contributions.</em></p>
-                </div>
+                <img src="professor_photo_khometa.png" alt="Dr. Olha Khometa" class="professor-photo khometa-photo">
+            </a>
+            <p><strong>Professor Olha Khometa</strong> is an esteemed professor at the University of Illinois specializing in Slavic folklore and Ukrainian cultural studies.
+            As the leader and project organizer of our Vertep project, she brings a wealth of knowledge on Ukrainian traditions, bridging academic rigor with cultural appreciation.
+            Her expertise not only enhances our understanding of Vertep but also fosters a deep respect for Ukrainian heritage.</p>
+
+            <p><em><a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank">Click here to learn more about Professor Khometa’s academic work and contributions.</a></em></p>
+            
+            <a href="https://slavic.illinois.edu/directory/profile/nn15" target="_blank" class="professor-link">
+                <img src="tala_naumovska_photo.png" alt="Professor Tala Naumovska" class="professor-photo naumovska-photo">
+            </a>
+            <p><strong>Professor Tala Naumovska</strong> is a dedicated lecturer at the University of Illinois, specializing in Slavic languages and Ukrainian studies.
+            As the co-organizer of our Vertep project, she contributes her passion and expertise to promote a deep appreciation of Ukrainian heritage among our community. Her efforts help connect tradition with modern audiences, ensuring the continued celebration of Ukrainian cultural heritage.</p>
+        
+            <p><em><a href="https://slavic.illinois.edu/directory/profile/nn15" target="_blank">Click here to learn more about Professor Tala Naumovska.</a></em></p>
+        </div>
+        
+        <div class="audio-section">
+            <div class="music-disc" onclick="playAudio()">
+                <img src="song.png" alt="Play Ukrainian Song">
+            </div>
+            <p><strong>Do you know the song "Carol of the Bells" is originally a Ukrainian song called Щедрик?</strong></p>
+            <audio id="ukrainian-song" src="song.mp3"></audio>
+        </div>
+        
+        <div class="about-vertep">
+            <h2>About Vertep</h2>
+            <p>Vertep is a traditional Ukrainian nativity play that blends folk storytelling with religious themes. This cultural heritage reflects Ukraine's rich historical traditions and is celebrated during the Christmas season.</p>
+        </div>
+
+        <div class="media-links">
+            <a href="https://en.wikipedia.org/wiki/Vertep" target="_blank" class="media-item">
+                <img src="photo2.jpg" alt="Vertep on Wikipedia">
+                <div class="overlay">Vertep on Wikipedia</div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=Ukrainian+Vertep" target="_blank" class="media-item">
+                <img src="photo1.jpg" alt="Vertep on YouTube">
+                <div class="overlay">Vertep on YouTube</div>
             </a>
         </div>
-    </header>
 
-    <main>
-        <section class="audio-section">
-            <div class="music-disc" onclick="playAudio()"></div>
-            <p><strong>Click the record to play/pause background music</strong></p>
-            <audio id="background-music" src="hej_sokoly.mp3" loop></audio>
+        <div style="height: 100px;"></div>
+    </section>
+</main>
 
-            <!-- Carol of the Bells 链接图片 -->
-            <div class="media-item" style="width: 200px; margin: 20px auto;">
-                <a href="https://en.wikipedia.org/wiki/Carol_of_the_Bells" target="_blank">
-                    <img src="photo123.jpg" alt="Carol of the Bells">
-                    <div class="overlay">Carol of the Bells - Originated in Ukraine</div>
-                </a>
-            </div>
-        </section>
+<footer class="footer">
+    <p>© 2024 University of Illinois - Slavic Department</p>
+    <p><a href="https://github.com/AlastorrrXu" target="_blank">Webdesign Duorui Xu</a> | </p>
+    <p>
+        <a href="https://illinois.edu" target="_blank">University of Illinois</a> | 
+        <a href="https://slavic.illinois.edu" target="_blank">Slavic Department</a> | 
+        <a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank">Dr. Olha Khometa</a>
+    </p>
+</footer>
 
-        <section class="content">
-            <h2>About Vertep</h2>
-            <p>Vertep is a traditional Ukrainian nativity play that blends folk storytelling with religious themes...</p>
-        </section>
+<!-- Snow effect script -->
+<script type="text/javascript">
+(function($){
+    $.fn.snow = function(options){
+        var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px', 'cursor': 'pointer'}).html('❄'),
+        documentHeight  = $(document).height(),
+        documentWidth   = $(document).width(),
+        defaults = {
+            minSize     : 10,
+            maxSize     : 20,
+            newOn       : 1000,
+            flakeColor  : "#AFDAEF"
+        },
+        options = $.extend({}, defaults, options);
+        var interval = setInterval( function(){
+            var startPositionLeft = Math.random() * documentWidth - 100,
+            startOpacity = 0.5 + Math.random(),
+            sizeFlake = options.minSize + Math.random() * options.maxSize,
+            endPositionTop = documentHeight - 200,
+            endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+            durationFall = documentHeight * 10 + Math.random() * 5000;
+            $flake.clone().appendTo('body').css({
+                left: startPositionLeft,
+                opacity: startOpacity,
+                'font-size': sizeFlake,
+                color: options.flakeColor
+            }).animate({
+                top: endPositionTop,
+                left: endPositionLeft,
+                opacity: 0.2
+            }, durationFall, 'linear', function(){
+                $(this).remove();
+            });
+        }, options.newOn);
+    };
+})(jQuery);
+$(function(){
+    $.fn.snow({
+        minSize: 5,
+        maxSize: 50,
+        newOn: 300
+    });
+});
+</script>
 
-        <section class="media-links">
-            <a href="https://en.wikipedia.org/wiki/Vertep" target="_blank" class="media-item">
-                <img src="photo123.jpg" alt="Vertep on Wikipedia">
-                <div class="overlay">Learn More on Wikipedia</div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?app=desktop&v=eq4qIOFs634" target="_blank" class="media-item">
-                <img src="photo123.jpg" alt="Vertep on YouTube">
-                <div class="overlay">Watch on YouTube</div>
-            </a>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>© 2024 University of Illinois - Slavic Department</p>
-        <p>
-            <a href="https://illinois.edu" target="_blank">University of Illinois</a> | 
-            <a href="https://slavic.illinois.edu" target="_blank">Slavic Department</a> | 
-            <a href="https://slavic.illinois.edu/directory/profile/okhometa" target="_blank">Dr. Olha Khometa</a>
-        </p>
-        <p>Dr. Olha Khometa: Professor of Slavic folklore and Ukrainian cultural studies, guiding this Vertep project.</p>
-    </footer>
-
-    <!-- 雪花效果容器 -->
-    <div id="snow-container"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>

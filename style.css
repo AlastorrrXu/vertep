@@ -1,87 +1,106 @@
-/* 页面整体样式 */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
     text-align: center;
-}
-
-.header, .footer {
-    background-color: #333;
     color: white;
-    padding: 1em 0;
+    margin-top: 20px;
 }
 
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Professor Section */
 .professor-highlight {
     text-align: center;
-    margin-top: 10px;
-    padding: 20px;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    border-radius: 8px;
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin-bottom: 20px;
 }
 
 .professor-link {
-    text-decoration: none;
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
+    position: relative;
+    display: inline-block;
+}
+
+/* Different sizes for each professor's photo */
+.khometa-photo {
+    width: 130px;
+    height: 130px;
+}
+
+.naumovska-photo {
+    width: 100px;
+    height: 100px;
 }
 
 .professor-photo {
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s, filter 0.3s;
 }
 
-.professor-info {
-    max-width: 600px;
+.professor-link:hover .professor-photo {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+/* Vertep Description */
+.about-vertep {
     text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
-.professor-info h2 {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.professor-info p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
+/* Audio Section */
 .audio-section {
     text-align: center;
-    margin: 20px;
+    margin: 30px;
 }
 
 .music-disc {
     width: 150px;
     height: 150px;
-    margin: auto;
-    background-image: url('photo123.jpg');
-    background-size: cover;
+    margin: 0 auto;
     border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #333;
     cursor: pointer;
-    transition: transform 0.5s;
 }
 
-.music-disc.spin {
-    animation: spin 3s linear infinite;
+.music-disc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.music-disc img.spin {
+    animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
+/* Media Links */
 .media-links {
     display: flex;
     justify-content: center;
@@ -91,18 +110,18 @@ body {
 
 .media-item {
     position: relative;
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 225px;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .media-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.3s ease;
+    transition: filter 0.3s;
 }
 
 .media-item:hover img {
@@ -118,47 +137,28 @@ body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Footer */
 .footer {
-    background-color: #333;
-    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
-.footer p {
-    margin: 0.5em 0;
+.footer p, .footer a {
+    color: white;
+    font-size: 14px;
 }
 
-.footer a {
-    color: #1e90ff;
+a {
+    color: #0055cc;
     text-decoration: none;
 }
 
-.footer a:hover {
+a:hover {
     text-decoration: underline;
-}
-
-/* 雪花样式 */
-#snow-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-}
-
-.snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    font-size: 1em;
-    opacity: 0.8;
-    user-select: none;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
 }

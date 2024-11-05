@@ -68,6 +68,11 @@ body {
     margin-top: 20px;
     font-size: 16px;
 }
+.roles {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
 
 /* Audio Section */
 .audio-section {

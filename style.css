@@ -10,12 +10,24 @@ body {
     align-items: center;
 }
 
+/* Header Section */
 .header {
     text-align: center;
     color: white;
     margin-top: 20px;
 }
 
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Intro Section */
 .intro-section {
     display: flex;
     flex-direction: column;
@@ -28,50 +40,48 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Professor Section */
-.professor-highlight {
-    text-align: center;
-    max-width: 700px;
-    margin-bottom: 20px;
-}
-
-.professor-link {
-    position: relative;
-    display: inline-block;
-}
-
-/* Different sizes for each professor's photo */
-.khometa-photo {
-    width: 130px;
-    height: 130px;
-}
-
-.naumovska-photo {
-    width: 100px;
-    height: 100px;
-}
-
-.professor-photo {
-    border-radius: 50%;
-    margin-bottom: 15px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.professor-link:hover .professor-photo {
-    transform: scale(1.1);
-    filter: brightness(0.6);
-}
-
-/* Vertep Description */
 .about-vertep {
     text-align: center;
     margin-top: 20px;
     font-size: 16px;
 }
-.roles {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
+
+/* Media Links */
+.media-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.media-item {
+    position: relative;
+    width: 300px;
+    height: 225px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s;
+}
+
+.media-item:hover img {
+    filter: brightness(60%);
+}
+
+.media-item .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Audio Section */
@@ -105,44 +115,144 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* Media Links */
-.media-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+/* Professor Section */
+.professor-highlight {
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 20px;
 }
 
-.media-item {
+.professor-link {
     position: relative;
-    width: 300px;
-    height: 225px;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 12px;
+    display: inline-block;
 }
 
-.media-item img {
+.khometa-photo {
+    width: 130px;
+    height: 130px;
+}
+
+.naumovska-photo {
+    width: 100px;
+    height: 100px;
+}
+
+.professor-photo {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.professor-link:hover .professor-photo {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+/* Roles Grid */
+.roles-grid {
+    display: grid; /* 启用网格布局 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小200px，自动适配屏幕宽度 */
+    gap: 20px; /* 方块之间的间距 */
+    justify-content: center; /* 居中对齐 */
+    max-width: 800px; /* 限制整个网格的最大宽度 */
+    margin: 0 auto; /* 容器居中 */
+}
+
+.roles {
+    text-align: center; /* 父级容器使内容水平居中 */
+}
+
+.role {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 220px; /* 限制最大宽度 */
+}
+
+.role:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.role h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #0055cc;
+}
+
+.role p {
+    font-size: 14px;
+    color: #555;
+}/* Script Section */
+.script-section {
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 自动换行，适应小屏幕 */
+    justify-content: space-between; /* 保持两列间的间距 */
+    align-items: flex-start; /* 内容顶部对齐 */
+    gap: 30px; /* 列之间的间距 */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s;
+    max-width: 1200px; /* 限制最大宽度 */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-sizing: border-box; /* 包括内边距计算在内 */
 }
 
-.media-item:hover img {
-    filter: brightness(60%);
+/* English and Ukrainian columns */
+.script-column {
+    flex: 1; /* 每列平分剩余空间 */
+    max-width: 48%; /* 最大宽度，保持列间平衡 */
+    min-width: 280px; /* 最小宽度，适应小屏幕 */
+    padding: 20px;
+    background: #ffffff; /* 设置背景为白色 */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 改进阴影效果 */
+    overflow: hidden; /* 避免内容超出容器 */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* 添加交互动画 */
 }
 
-.media-item .overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+/* 悬停效果 */
+.script-column:hover {
+    transform: translateY(-5px); /* 鼠标悬停时上浮 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 增强阴影 */
 }
 
-/* Footer */
+/* 调整文字样式 */
+.script-block {
+    margin-bottom: 15px; /* 每个块的间距 */
+}
+
+.script-block h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #0055cc; /* 设置标题颜色 */
+}
+
+.script-block p.text {
+    word-wrap: break-word; /* 自动换行 */
+    word-break: break-word; /* 防止长单词溢出 */
+    font-size: 16px;
+    line-height: 1.6; /* 增加行间距 */
+    color: #444444; /* 颜色稍微加深，提高可读性 */
+}
+
+/* 自适应优化 */
+@media screen and (max-width: 768px) {
+    .script-section {
+        flex-direction: column; /* 小屏幕下垂直布局 */
+        align-items: center;
+    }
+
+    .script-column {
+        max-width: 100%; /* 每列占满宽度 */
+    }
+}
+
+/* Footer Section */
 .footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -159,11 +269,14 @@ body {
     font-size: 14px;
 }
 
-a {
-    color: #0055cc;
+.footer a {
     text-decoration: none;
+    color: #0055cc;
 }
 
-a:hover {
+.footer a:hover {
     text-decoration: underline;
+}
+main {
+    margin-bottom: 150px;
 }

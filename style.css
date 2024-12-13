@@ -280,3 +280,12 @@ body {
 main {
     margin-bottom: 150px;
 }
+#vertep-video {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#vertep-video video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
